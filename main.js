@@ -3,21 +3,40 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
+//clicking inputBox, it's value becomes empty
 const searchBox = document.querySelector('.search-box');
-searchBox.addEventListener("keypress", setQuery);
+searchBox.addEventListener("click", () =>{
+  searchBox.value = ''
+})
+// searchBox.addEventListener("keypress", setQuery);
 
-function setQuery(evt){
-  if (evt.keyCode == 13) {
-    getResults(searchBox.value);
+// function setQuery(evt){
+//   console.log(777)
+//   if (evt.keyCode == 13) {
+//     getResults(searchBox.value);
+//   }
+// }
+
+// function getResults (query) {
+//   fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+//   .then(weather =>{
+//     return weather.json();
+//   }).then(displayResults);
+// }
+
+//coding for search button
+document.getElementById("btn").addEventListener("click", () =>{
+  if (searchBox.value == 0) {
+    alert('Please Enter A Country or City Name');
+  }else{
+    const countryName = searchBox.value;
+    fetch(`${api.base}weather?q=${countryName}&units=metric&APPID=${api.key}`)
+    .then(weather =>{
+      return weather.json();
+    }).then(displayResults);
+  
   }
-}
-
-function getResults (query) {
-  fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-  .then(weather =>{
-    return weather.json();
-  }).then(displayResults);
-}
+});
 
 function displayResults(weather) {
   let city = document.querySelector('.location .city');
