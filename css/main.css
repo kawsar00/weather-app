@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,8 @@
 }
 
 body {
-  font-family: 'montserrat', sans-serif;
-  background-image: url('bg.jpg');
+  font-family: 'Lemonada', cursive;
+  background-image: url('../images/bg3.jpg');
   background-size: cover;
   background-position: top center;
 }
@@ -15,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)); */
 }
 
 header{
@@ -25,25 +27,45 @@ header{
   padding: 50px 15px 15px;
 }
 
-header input{
+header #input{
   width: 100%;
   max-width: 280px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #313131;
-
-  border-radius: 16px 0px 16px 0px;
-  border-bottom: 3px solid #DF8E00;
+  background-color: rgb(255 255 255 / 19%);
+  color: #FFF;
+  /* border-radius: 16px 0px 3px 0px; */
+  border-bottom: 3px solid #19a55a;
   font-weight: 300;
   transition: 0.2s ease-out;
+  font-size: 20px;
+  position: relative;
+}
+
+::placeholder {
+  font-family: 'Lemonada', cursive;
+  color: #FFF;
+  font-size: 16px;
+  opacity: 1; /* Firefox */
 }
 
 header input:focus{
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(255 255 255 / 30%);
 }
 
+#btn{
+  background-color: #4c6d41;
+  border: none;
+  padding: 10px 10px;
+  border-bottom: 3px solid #19a55a;
+  cursor: pointer;
+  outline: none;
+}
+#btn img{
+  width: 35px;
+  height: 24px;
+}
 main{
   flex: 1 1 100%;
   padding: 25px 25px 50px;

@@ -4,26 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather app</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="app-wrap">
     <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city....">
+      <input id="input" type="text" autocomplete="off" class="search-box" placeholder="Search for a city....">
+      <button id="btn"><img src="images/search.png" alt=""></button>
+      <!-- <input id="btn" type="button" value="Submit"> -->
     </header>
     <main>
       <section class="location">
-        <div class="city">Dhaka, Bangladesh</div>
-        <div class="date">Monday 11 August 2020</div>
+        <div class="city">Bangladesh, BD</div>
+        <div class="date">Day/ Date/ Month/ Year</div>
       </section>
       <div class="current">
-        <div class="temp">15<span>&#176;c</span></div>
+        <div class="temp">00<span>&#176;c</span></div>
         <div class="weather">Sunny</div>
-        <div class="high-low">13&#176;c / 16&#176;c</div>
+        <div class="high-low">0&#176;c / 0&#176;c</div>
       </div>
     </main>
   </div>
 
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
